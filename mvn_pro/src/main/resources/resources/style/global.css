@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #E7EAEB;
+	font-family: "微软雅黑", "黑体", "宋体";
+	font-size: 12px;
+	height: 100%;
+	width: 100%;
+}
