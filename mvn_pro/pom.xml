@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>com.webproject</groupId>
-	<artifactId>maven_project</artifactId>
+	<groupId>com.mvn_pro.project</groupId>
+	<artifactId>mvn_pro</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.1</version>
 	
-	<name>maven_project Maven Webapp</name>
+	<name>mav_pro Maven Webapp</name>
 	<url>http://maven.apache.org</url>
   
 	<properties>
