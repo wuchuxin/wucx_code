@@ -30,10 +30,10 @@ public class CustomUsernamePasswordAuthenticationFilter extends UsernamePassword
 
 		String userCode = request.getParameter("kaptchaCode");
 
-		this.logger.info("\r\nCaptcha code is " + code + ", and User'code is" + userCode);
+		this.logger.info("\r\nCaptcha code is [" + code + "], and User'code is [" + userCode+"]");
 
 		Boolean isCorrect = Boolean.valueOf((StringUtils.isNotBlank(code)) && (StringUtils.isNotBlank(userCode))
-				&& (StringUtils.equals(code, userCode)));
+				&& (StringUtils.equalsIgnoreCase(code, userCode)));
 		if (!isCorrect.booleanValue()) {
 			throw new BadCaptchaException(
 					this.messages.getMessage("AbstractUserDetailsAuthenticationProvider.badCaptcha", "Bad captcha"));

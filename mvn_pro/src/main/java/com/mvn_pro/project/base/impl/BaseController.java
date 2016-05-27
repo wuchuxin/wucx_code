@@ -21,7 +21,7 @@ public class BaseController {
 	    if ((auth.getPrincipal() instanceof UserDetails))
 	    {
 	      user = (User)auth.getPrincipal();
-	      System.out.println("current login user ====��" + user.getUserName());
+	      System.out.println("current login user ====>" + user.getUserName());
 	    }
 	    model.addAttribute("loginUser", user);
 	  }

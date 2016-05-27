@@ -17,8 +17,7 @@ public class LogoutSuccessHandler extends SimpleUrlLogoutSuccessHandler {
 			throws IOException, ServletException {
 		User userDetails = (User) authentication.getPrincipal();
 		if (userDetails != null) {
-			System.out.println(
-					"IP- [" + getIpAddress(request) + "]- ,����  -[" + userDetails.getUserName() + "]- ��������.");
+			logger.info("\r\nIP- [" + getIpAddress(request) + "]- , User -[" + userDetails.getUserName() + "]- logout.");
 		}
 		super.onLogoutSuccess(request, response, authentication);
 	}

@@ -34,12 +34,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.anyRequest().authenticated()
 				.and().formLogin().loginPage("/login").permitAll()
 				.successHandler(loginSuccessHandler())
-				.and().logout().logoutUrl("/logout")
-				.logoutSuccessUrl("/index").permitAll()
+				//.defaultSuccessUrl("/index", true)//加了这个successHandler就失效了
+				.and().logout().logoutUrl("/logout").permitAll()
+				.logoutSuccessUrl("/index")
 				.logoutSuccessHandler(logoutSuccessHandler()).invalidateHttpSession(true)
 				.and().rememberMe().rememberMeParameter("remember-me")
 				.tokenValiditySeconds(1209600).tokenRepository(tokenRepository())
-				.and().addFilterBefore(this.customUsernamePasswordAuthenticationFilter,UsernamePasswordAuthenticationFilter.class);
+				.and().addFilterBefore(customUsernamePasswordAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 	}
 
 	@Autowired
