@@ -44,7 +44,7 @@ public class BaseManager<Model extends IBaseModel, PK extends Serializable, Repo
   
   public List<Model> findAll()
   {
-    List<Model> list = new ArrayList(0);
+    List<Model> list = new ArrayList<Model>(0);
     Iterator<Model> iterator = this.repository.findAll().iterator();
     while (iterator.hasNext()) {
       list.add(iterator.next());
