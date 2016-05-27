@@ -30,7 +30,7 @@ public class CustomUsernamePasswordAuthenticationFilter extends UsernamePassword
 
 		String userCode = request.getParameter("kaptchaCode");
 
-		this.logger.info("\r\n��������������" + code + ", ������������������" + userCode);
+		this.logger.info("\r\nCaptcha code is " + code + ", and User'code is" + userCode);
 
 		Boolean isCorrect = Boolean.valueOf((StringUtils.isNotBlank(code)) && (StringUtils.isNotBlank(userCode))
 				&& (StringUtils.equals(code, userCode)));

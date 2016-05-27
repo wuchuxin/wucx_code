@@ -27,8 +27,8 @@ public class CaptchaController extends BaseController {
 	@RequestMapping
 	public ModelAndView getKaptchaImage(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		HttpSession session = request.getSession();
-		String code = (String) session.getAttribute("KAPTCHA_SESSION_KEY");
-		System.out.println("����������" + code);
+		//String code = (String) session.getAttribute("KAPTCHA_SESSION_KEY");
+		//System.out.println("Captcha code is " + code);
 
 		response.setDateHeader("Expires", 0L);
 
@@ -43,6 +43,8 @@ public class CaptchaController extends BaseController {
 		String capText = this.captchaProducer.createText();
 
 		session.setAttribute("KAPTCHA_SESSION_KEY", capText);
+		
+		System.out.println("Captcha code is " + capText);
 
 		BufferedImage bi = this.captchaProducer.createImage(capText);
 		ServletOutputStream out = response.getOutputStream();
