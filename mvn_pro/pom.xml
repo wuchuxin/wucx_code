@@ -5,7 +5,7 @@
 	<groupId>com.mvn_pro.project</groupId>
 	<artifactId>mvn_pro</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.2</version>
+	<version>1.0.1</version>
 	
 	<name>mav_pro Maven Webapp</name>
 	<url>http://maven.apache.org</url>
