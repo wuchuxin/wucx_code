@@ -14,9 +14,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 
-import com.mvn_pro.project.handler.LoginSuccessHandler;
-import com.mvn_pro.project.handler.LogoutSuccessHandler;
 import com.mvn_pro.project.security.filter.CustomUsernamePasswordAuthenticationFilter;
+import com.mvn_pro.project.security.handler.LoginSuccessHandler;
+import com.mvn_pro.project.security.handler.LogoutSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
