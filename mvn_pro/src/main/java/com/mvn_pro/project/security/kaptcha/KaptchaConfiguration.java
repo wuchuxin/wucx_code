@@ -23,10 +23,7 @@ public class KaptchaConfiguration {
 
 	static {
 		try {
-			properties.load(
-					new FileInputStream(File.separator + PathUtils.getTomcatClassesPath() + "/application.properties"));
-
-			System.out.println(properties);
+			properties.load(new FileInputStream(File.separator + PathUtils.getTomcatClassesPath() + "/application.properties"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
